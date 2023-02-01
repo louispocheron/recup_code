@@ -1,0 +1,9 @@
+
+{% block body %}
+    <link href="{{ asset('css/password.css') }}" rel="stylesheet">
+    <h1>Regardez dans votre boite mail !</h1>
+    <p>
+        Ce lien expirera dans  {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+    </p>
+    <p>Si vous n'avez rien reçu, regardez dans votre boite mail au niveau des spam sinon <a href="{{ path('app_forgot_password_request') }}">réessayez</a>.</p>
+{% endblock %}

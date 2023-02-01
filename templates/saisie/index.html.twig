@@ -1,0 +1,199 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Saisie{% endblock %}
+
+{% block body %}
+ <link href="{{ asset('css/saisie.css') }}" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+
+{% if isAssoc == [] %}
+<div class="container-no">
+    <h2 style="text-align: center;">Vous devez d'abord adhérer à une association avant de faire des saisies</h2>
+    <h3 style="text-align: center;">Retrouvez la liste des associations</h3>
+    <a href='{{ path('association') }}' class="btn-basic ref">ici</a>
+
+    <img src="{{ asset('assets/Human.png') }}" alt="human" class="img-responsive" style="margin: 0 auto;">
+</div>
+{% else %}
+    {% if app.user == true %}
+        {{form_start(form)}}
+            <div class="form-saisie">
+                <div class="evenement1 firstable">
+                    <div class="h1-row event">ÉVÈNEMENT</div>
+                    <div class="input-container firstC">
+                        <div class="date-assoc first">
+                            <div class='rowSaisie'>
+                                <legend class="label">Date</legend>
+                                {{form_widget(form.date)}}
+                            </div>
+                            <div class='rowSaisie'>
+                                <div class="info-supp">
+                                    <label class="label">Association</label>
+                                </div>
+                                {{form_widget(form.association)}}
+                            </div>
+                        </div>
+                        <div class="date-assoc">
+                            <div class='rowSaisie'>
+                                <label class="label">Ville de départ</label>
+                                {{form_widget(form.villeDepart)}}
+                            </div>
+
+                            <div class='rowSaisie'>
+                                <label class="label">Ville d'arrivée</label>
+                                {{form_widget(form.villeArrive)}}
+                            </div>
+                            <div class='rowSaisie bottom-input'>
+                                <label class="label">Nature du déplacement</label>
+                                {{form_widget(form.raisons)}}
+                            </div>
+                        </div>
+                    </div>
+                    {# </div> #}
+                </div>
+                <div class="evenement1 first">
+                    <div class="h1-row second event">VALORISATION DES HEURES</div>
+                    <div class="input-container firstC">
+                        <div class="date-assoc first">
+                            <div class='rowSaisie hours'>
+                                <div class="label-container">
+                                    <label class="label">Heure de départ</label>
+                                    <a class="href-info" href="/info-saisies" target="_blank"><i class="fa-solid fa-circle-question"></i></a>
+                                </div>
+                                {{form_widget(form.heureDepart , {'attr': {'class': 'heure'}}) }}
+                            </div>
+
+                            <div class='rowSaisie hours secondary'>
+                                <div class="label-container">
+                                    <label class="label">Heure d'arrivée</label>
+                                    <a class="href-info" href="/info-saisies" target="_blank"><i class="fa-solid fa-circle-question"></i></a>
+                                </div>
+                                {{form_widget(form.heureArrivee, {'attr': {'class': 'heure'}}) }}
+                            </div>
+                        </div>
+                        <div class="date-assoc">
+                            <div class='rowSaisie'>
+                                <label class="label">Durée</label>
+                                {{form_widget(form.duree, {'attr': {'class': 'dureeInput disabled'}}) }}
+                            </div>
+                            <div class='rowSaisie row'>
+                                <div class="groupe-container">
+                                    <div class="label-container">
+                                        <label class="label">Groupe</label>
+                                        <a class="href-info" href="/info-saisies" target="_blank"><i class="fa-solid fa-circle-question"></i></a>
+                                    </div>
+                                    {{form_widget(form.groupe, {'attr': {'class': 'heure groupe groupeSelect'}}) }}
+                                </div>
+                                <div class="groupe-container">
+                                    <label class="label">Taux horaire</label>
+                                    <input type="text" class="pourcentage-input disabled" disabled />
+                                </div>
+                            </div>
+                            <div class='rowSaisie' id="chargeInputId" data-charges='{{charges}}'>
+                                <label class="label">Charges</label>
+                                {{form_widget(form.charges, {'attr': {'class': 'heure bottom-input disabled' }}) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="evenement1 bottom-container">
+                <div class="h1-row troisieme">FRAIS DE DÉPLACEMENT</div>
+                <div class="input-container">
+                    <div class="date-assoc">
+                        <div class='rowSaisie' id="km">
+                            <div class="label-container">
+                                <label class="label">Kilomètrage</label>
+                                <a class="href-info" href="/info-saisies" target="_blank"><i class="fa-solid fa-circle-question"></i></a>
+                            </div>
+                            {{form_widget(form.km, {'attr': {'class': 'kmInput'}}) }}
+                        </div>
+                        {# <div class='rowSaisie'>
+                            <label>Barème</label>
+                            <input class="bareme bottom-input" type="text" name="barème">
+                        </div> #}
+                           <div class='rowSaisie'>
+                            <label class="label">Barème km</label>
+                            {{form_widget(form.bareme, {'attr': {'class': 'bareme bottom-input'}}) }}
+                        </div>
+                    </div>
+                    <div class="date-assoc">
+                        <div class='rowSaisie'>
+                            <div class="label-container">
+                                <label class="label">Autres frais</label>
+                                <a class="href-info" href="/info-saisies" target="_blank"><i class="fa-solid fa-circle-question"></i></a>
+                            </div>
+                            {{form_widget(form.frais, {'attr': {'class': 'coutInput'}}) }}
+                        </div>
+
+                        
+                        <div class='rowSaisie'>
+                            <label class="label">Frais kilométriques</label>
+                            {{form_widget(form.fraisKilometrique, {'attr': {'class': 'fraisInput bottom-input disabled'}}) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="evenement1 bottom-container">
+                <div class="h1-row">TOTAUX</div>
+                <div class="input-container">
+                    <div class="date-assoc">
+                        <div class='rowSaisie'>
+                            <label>Total note de frais</label>
+                            <input  class="totalNote disabled" type="text" name="totalNote" value="0" disabled>
+                        </div>
+
+                        <div class='rowSaisie'>
+                            <label>Dons</label>
+                            {{form_widget(form.dons, {'attr': {'class': 'donsInput bottom-input disabled'}}) }}
+                        </div>
+                    </div>
+                    <div class="date-assoc">
+                        <div class='rowSaisie'>
+                            <label>Remboursement</label>
+                            {{form_widget(form.aPayer, {'attr': {'class': 'apayerInput'}}) }}
+                        </div>
+
+                        <div class='rowSaisie'>
+                            <label>Heures valorisées</label>
+                            {{form_widget(form.heuresValorisees, {'attr': {'class': 'heureValoriseesInput bottom-input'}}) }}
+                        </div>
+                    </div>
+                </div> 
+            </div>
+                    <div class='rowSaisie btn-container'>
+                            {{form_widget(form.enregistrer , {'attr': {'class': 'btn-basic fonted'}}) }}
+                    </div>
+                </div>
+            </div>
+        {{form_end(form)}}
+
+
+        {# MODAL #}
+        <div class="modal-saisie">
+            <h1 class="modalP dangerP">Vous êtes sur le point de modifier le taux de remboursement des frais kilométriques !</h1>
+            <i class="fa-solid fa-circle-exclamation logo-modal"></i>
+            <p>Si vous souhaitez renoncer au remboursement d’une partie ou de la totalité de vos frais afin de bénéficier de réductions d’impôts, veillez à respecter le taux en vigueur (Ref. barème fiscal de remboursement applicable)</p>
+            <button class="btn-oui">
+                <p class="je-comprends">Je comprends</p>
+            </button>
+        </div>
+
+    {% else %}
+        <h1>devez etre connectez pour faire une saisie</h1>
+    {% endif %}
+    {% endif %}
+
+
+    {% endblock %}
+
+    {% block javascripts %}
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        {{ encore_entry_script_tags('saisie') }}
+        {{ encore_entry_script_tags('sort') }}
+
+
+    {% endblock %}
+

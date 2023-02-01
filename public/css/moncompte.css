@@ -1,0 +1,96 @@
+main{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+  color: #2E2E2E;
+}
+.infoPerso{
+    display: flex;
+    justify-self: flex-start;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 1rem;
+    height: auto;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transition: all 0.5s ease-in-out;
+    color: #2E2E2E;
+    text-decoration: none;
+    background-color: #fff;
+  }
+  .infoPerso h1{
+    text-align: center;
+    justify-self: flex-start;
+    font-size: 1.5rem;
+    color: #2E2E2E;
+  }
+  .infoPerso-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-left: 1rem;
+  }
+  .moncompte-avatar{
+    width: 2.5rem;
+    aspect-ratio: 2 / 3;
+    object-fit: contain;
+  }
+  .infoPerso-container p{
+    margin: 5px;
+  }
+  .server-served{
+    font-weight: 500;
+  }
+  .btn-saisie{
+    border-radius: 20px;
+	border: 2px solid #fff;
+	background-color: #152149;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;  
+    width: 2.5rem;
+    height: 2.5rem;
+    text-decoration: none;
+  }
+  .btn-saisie:hover{
+    background-color: white;
+    color: #152149;
+    border: 1px solid #152149;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  @media only screen and (min-width: 964px){
+    main{
+      align-items: center;
+    }
+    .infoPerso{
+      width: 50%;
+      height: 60%;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0;
+    }
+    .container-container{
+      align-self: center;
+      justify-self: center;
+    }
+    .infoPerso-container{
+      flex-direction: row;
+      margin: 0;
+    }
+    @media only screen and (min-width: 1280px){
+    }
+      
+    }

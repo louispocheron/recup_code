@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');  
+
+form{
+    width: 100%;
+    height: 100%;
+}
+.form-saisie{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+height: 100%;
+}
+.dangerP{
+    font-size: 1.1rem !important;
+    text-align: center;
+}
+.je-comprends{
+    margin: 0;
+    width: 100%;
+}
+.logo-modal{
+    font-size: 2rem;
+    color: red;
+}
+.hours{
+    width: 100%;
+    height: 50%;
+    margin-top: 0 !important;
+}
+.secondary{
+    margin-top: -1.5rem !important;
+}
+.container-no{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.ref{
+    width: 1.7rem;
+    height: 1rem;
+    padding: auto;
+    text-align: center;
+    margin: 1rem !important;
+    align-self: center;
+}
+.evenement1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 40%;
+    width: 45%;
+    border-top: none;
+    margin: 1rem;
+    padding: 0;
+}
+/* .firstable{
+    height:45%;
+} */
+.bottom-container{
+    height: 35%;
+}
+
+.h1-row{
+    width: 100%;
+    height: 20%;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.evenement1 input {
+  display: block;
+  width: 90%;
+  height: 30px;
+  background: transparent;
+  border: solid 1px #ccc;
+  transition: all .3s ease;
+  padding: 0 15px;
+}
+.evenement1 input:focus{
+    border: solid 1px #152149;
+    outline: none;
+}
+.donsInput:focus{
+    border-color: #2196F3 !important;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+.rowSaisie{
+    width: 80%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.groupe{
+    width: 50%;
+    height: 20px;
+}
+#form_association{
+    width: 100%;
+    height: 30px;
+    padding: 0 15px;
+}
+.heure{
+    height: 30px;
+}
+
+
+.label-container label{
+    margin-right: 0;
+}
+
+  .modal-saisie[data-active=true]{
+    display: flex;
+  }
+
+  .modal-saisie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    height: auto;
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    /* border-radius: 5px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     padding: 2rem;
+    display: none;
+  }
+  .modal-saisie button{
+    width: 65%;
+    height: 20%;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    background-color: #152149;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    margin-right: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+  }
+  .modal-saisie h1{
+    font-size: 1.4rem;
+  }
+  .modal-saisie button:hover{
+    background-color: #2c4088;
+    /* border: none; */
+    cursor: pointer;
+  }
+
+.disabled{
+    background-color: #e9ecef !important;
+    border: none !important;
+}
+.disabled:focus{
+    border: none !important;
+}
+.heure select{
+    width: 5rem;
+    height: 40px;
+    background: transparent;
+    border: solid 1px #ccc;
+    transition: all .3s ease;
+    padding: 0 15px;
+}
+
+.second{
+    background-color: #152149;
+}
+.third{
+    border: 1px solid #fef9a8;
+}
+.troisieme{
+    background-color: #ffcc66;
+}
+.dropdown-toggle{
+    background-color: #152149;
+}
+
+.label{
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+.info-supp{
+    margin-right: auto;
+}
+/* .hidden-info{
+    
+    display: none;
+} */
+.info-supp:hover .hidden-info{
+    display: block;
+}
+
+.bottom-input{
+    margin-bottom: 1rem;
+}
+.btn-container{
+    margin: 0;
+    justify-content: flex-start;
+}
+.btn-basic{
+    margin: 0;
+}
+.btn-basic:hover{
+    background-color: #e8e9f0;
+}
+
+.evenement2{
+    width: 45%;
+    border: 1px solid black;
+}
+.evenement3{
+
+    border: 1px solid black;
+}
+.evenement4{
+    border: 1px solid black;
+}
+.date-assoc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 49%;
+    height: 100%;
+    align-self: flex-start;
+}
+.fonted{
+  font-family: 'Montserrat', sans-serif !important;
+}
+.input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 80%;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    color: #2E2E2E;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+.row{
+    flex-direction: row;
+}
+
+.groupe-container{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.groupe-container input{
+    width: 70%;
+}
+.fa-circle-question{
+    height: 15px;
+    width: 15px;
+}
+.fa-circle-question:hover{
+    fill: red;
+}
+.href-info{
+    width: 20px;
+    text-decoration: none;
+    color: black;
+}
+.href-info:hover .fa-circle-question{
+    color: #152149;
+}
+/* .firstC{
+    height: 100%;
+}
+.event{
+    height: 7rem;
+} */
+@media only screen and (max-width: 963px){
+    .input-container{
+        flex-direction: column;
+    }
+    .secondary{
+        margin: 1rem !important;
+    }
+    .evenement1{
+        width: 80%;
+    }
+    .date-assoc{
+        width: 100%;
+    }
+    .h1-row{
+        height: 3rem;
+    }
+    .modal-saisie{
+        position: fixed;
+        width: 80%;
+    }
+}

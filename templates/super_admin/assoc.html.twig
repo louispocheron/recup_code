@@ -1,0 +1,99 @@
+
+{% extends 'base.html.twig' %}
+
+
+{% block title %}
+ superadmin association
+{% endblock %}
+
+{% block body %}
+    <link href="{{ asset('css/supeadmin.css') }}" rel="stylesheet">
+        {# <link href="{{ asset('css/admin.css') }}" rel="stylesheet"> #}
+
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+
+
+    <div class="assoc-container">
+        <div class="assoc-info">
+            <h3 class="assoc-name-main">{{association.name}}</h3>
+            {% if association.logo != null %}
+                <img class="assoc-logo" src="{{ asset('/build/logo_directory/' ~ association.logo) }}" alt="logo de l'association">
+            {% else %}
+                <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img-first default-image"></img>
+            {% endif %}
+            <h5 style="color:#505050">Cette association est gérée par {{association.user.username}}</h5>
+            <a href="{{path("super_admin_action_change_admin", { id: association.id })}}"><button class="btn-yes custom-btn">Changer l'administrateur</button></a>
+        </div>
+        <div class="full-card-container">
+            <h4>Total de toutes les saisies de {{association.name}}</h4>
+            <div class="card-container">
+                <div class="homeCardAdmin">
+                    <img src="{{asset('assets/DONSPNG.png') }}" class='svg-home'>
+                    <h2 class="dons-card"></h2>
+                    <h3>Dons</h3>
+                </div>
+                <div class="homeCardAdmin">
+                    <img src="{{asset('assets/REMBOURSEMENT-02.svg') }}" class='svg-home'>
+                    <h2 class="remboursement-card"></h2>
+                    <h3>Remboursement</h3>
+                </div>
+                <div class="homeCardAdmin">
+                    <i class="fa-solid fa-clock svg-homecard"></i>
+                    <h2 class="heure-card"></h2>
+                    <h3 class="heure-card-bene">Heure de bénévolat</h3>
+                </div>
+                <div class="homeCardAdmin">
+                    <img src="{{asset('assets/VALORISATION-01.svg') }}" class='svg-home bene'>
+                    <h2 class="benevolat-card"></h2>
+                    <h3>Bénévolat</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <table class="table">
+                <tr>
+                    <th>Utilisateur</th>
+                    <th>Email</th>
+                    <th>Supprimer</th>
+                </tr>
+        {% if users is empty %}
+            <tr>
+                <td>Aucun utilisateur</td>
+                <td></td>
+                <td></td>
+            </tr>
+        {% else %}
+            {% for user in users %}
+                    <tr onclick="window.location='{{path('super_admin_user', {'id': association.id, 'userID': user.id, } )}}'">
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email }}</td>
+                        <td><a href="{{ path('super_admin_user_delete', {'id': association.id, 'userID': user.id, } )}}"><i class="fa-solid fa-trash"></i></a></td>
+                    </tr>
+                    
+            {% endfor %} 
+        {% endif %}
+        </table>
+    </div>
+
+    <div class="modal-adherer-del">
+        <h1 class="modalP">Voulez-vous vraiment supprimer cette saisie ?</h1>
+        <img src="{{ asset('assets/HumanMan.png') }}" class="img-modal"/>
+        <div class='btn-container'>
+                <button class="btn-yes">
+                    oui 
+                </button>
+            <button class="btn-no"> 
+                non
+            </button>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    {{ encore_entry_script_tags('superAdmin') }}
+    {{ encore_entry_script_tags('superAdminFetch') }}
+
+{% endblock %}

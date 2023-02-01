@@ -1,0 +1,230 @@
+AVANT DE PASSER A UI UX : 
+    mailer pour changer mot de passe marche pas mailHOG
+
+
+                        FAIT : 
+                            total : 
+                            heure : fait / heure :: FAIT
+                            dons / e  :: FAIT 
+                            a payer / e :: FAIT
+                            heures valorisées/ e  :: FAIT 
+
+                            MANQUE A APPEND LE TOUT EN HTML !! 
+pdf : tableau pareil que recap avec totaux 
+
+
+
+saisie : encadré gris avec pourcentage du groupe choisi
+
+FAIT: 
+enlever contour saisie et mettre border radius 5px 
+don : beug négatif a faire !! nb apres virgule important
+
+
+enregister une assoc : 
+    -input discipline puis rechercher dans la page toute les assoc 
+    -input region et departement
+
+
+    accueil euro pas dollar
+
+
+
+New 
+
+message erreur meme pseudo inscription
+
+    
+    
+*/
+Page d'accueil ancien logos changer ca----------------------------------------------------FAIT
+association changer de logo dans la page administration-----------------------------------FAIT
+comfirmation adherer/quitter association-------------------------------------------------- EN COURS MANQUE CSS
+css cassé admin---------------------------------------------------------------------------FAIT
+super admin donner admin a quelqu'un------------------------------------------------------DEMANDER A MARIO COMMENT IL VEUT CA 
+Recherche par année ne fonctionne pas-----------------------------------------------------FAIT
+Il n’y a que la durée qui s’affiche dans le recap même après 3 saisies--------------------FAIT 
+mois sans année donc toutes les annees que les mois 
+Nous  contacter                                                                                                                                                                                                                                                                message alerte quitter aller dans associations
+recap beug--------------------------------------------------------------------------------FAIT
+hover sur les recap-----------------------------------------------------------------------FAIT
+revoir les css saisie---------------------------------------------------------------------FAIT A MOITIE
+fautes orthographe dans message alerte saisie---------------------------------------------FAIT
+event keyup down changement bareme au lieu de focus---------------------------------------FAIT
+eneleve pas chiffre apres virgules dans a paye--------------------------------------------FAIT
+demande de remboursement total pas bon input rouge----------------------------------------FAIT
+don bloquer les decimales a 2-------------------------------------------------------------FAIT
+frais message d'erreur si décimale--------------------------------------------------------FAIT
+pb chiffre virgules fin-------------------------------------------------------------------FAIT
+pdf marche pas en ligne ??? 
+logo pdf plutot que cliquer sur la ligne--------------------------------------------------FAIT
+suprimer saisie marche pas----------------------------------------------------------------FAIT 
+certaines image pour assoc ne marchent pas------------------------------------------------FAIT
+handle error 404--------------------------------------------------------------------------FAIT
+cdos21.org pas securisé-------------------------------------------------------------------FAIT
+
+
+RAJOUTE
+Admin ne peut voir que les saisies de l'utilisateur de SON association----manque juste pour recherche
+logo par default en prod a redimensionner ?? demander / ratio 1
+mailer ne marche tjrs pas ?? 
+
+
+*/
+
+
+Dans super admin dire qui est l'admin de l'assoc--------------------------------------------FAIT
+btn -> changer, tout les utilisateur et donne le droit--------------------------------------FAIT
+recap vert -> valorisees a valorisation et espace entre les deux points---------------------FAIT
+recap vert -> don avec un S-----------------------------------------------------------------FAIT
+recap vert -> remboursement a la place de a payer-------------------------------------------FAIT
+recap vert -> bénévolat au lieu de durée----------------------------------------------------FAIT
+faire passer les donnees totales a la page d'accueil----------------------------------------FAIT
+event keyup down changement bareme au lieu de focus>  toast comme dans adherer assoc--------FAIT
+demander pour supprimer une saisie avec une notification------------------------------------FAIT
+superadmin peut changer valeur des groupe et bareme dans saisie
+rajouter logo saved header avec trait vertical
+
+ssh://cdosexgi-saved@ssh.cluster005.hosting.ovh.net:22/
+ChenoveSaved21
+
+qu'ai je a faire le reste de la semaine? 
+finir le css de /mailer
+faire marcher le mailer?? ca marche pas wtf 
+
+
+logo saved 
+votre plateforme qui simplifie vos démarches bénévoles
+
+faq : en savoir plus 
+
+responsive de tout les modals
+
+
+
+
+
+// A FAIRE DE LA SEMAINE DU 09/11 : 
+    boutton s'inscrire au lieu d'un lien avec text-decorationn------------------PUSHED
+    trouver un truc pour le rgpd register
+    modal point d'interrogation sur la meme ligne-------------------------------a expliquer principe des media queries zz  
+    boutton pdf a l'arrivé recap pour toutes les saisies------------------------FAIT 
+    manque une ligne dans recap
+    saisie : 
+        bug arrondis pas ?toFixed(2)?-------------------------------------------FAIT
+    botton admin inverser dans choix assoc--------------------------------------FAIT
+
+
+// A FAIRE SEMAINE 14/11
+    recherche annnee/mois sans assoc marche pas
+    PDF IDENTIQUE GROUPE / UNIQUE
+    CARD POUR COMPTE ADMIN / SUPER ADMIN
+    CSS SUPER ADMIN
+
+
+// LEARN REACT NATIVE MTN NON ? 
+
+
+
+A FAIRE 09/12 : 
+METTRE LOGO CDOS DANS LOGIN-----------------------------------------------------FAIT
+REGISTER LES DEUX LOGO CDOS SAVED-----------------------------------------------FAIT
+en cliquant vous accepter les conditions générales d'utilisations de Saved------FAIT
+info pratique menu burger mobile------------------------------------------------FAIT
+
+
+DEMANDER CIRYL :
+ 	IMAGE : API / mvc backend
+	MAILER DNS CONTACT 
+
+
+recap: 
+Barème km
+
+mobile : 
+affiche frais au lieu de bareme-------------------------------FAIT
+
+ASSOC DATE VD VA RAISONS KM BAREMEKM FRAIS DONS A PAYER DUREE GRP HEURES VALORISEES---FAIT
+
+MEME PDF GROUPE QUE SIMPLE-------------------------------------FAIT
+
+QUESTIONS FREQUENTES -> INFOS PRATIQUES------------------------FAIT 
+protection des données avec un seul s--------------------------FAIT
+template mettre dans le register-------------------------------FAIT
+
+
+BAREME KM AVEC ACCENT DANS SAISIE------------------------------FAIT
+
+
+AUCUNE ASSOCIATION TROUVEE SI RIEN DE TROUVEE
+POPUP POUR LES MESSAGES d'ERREURS
+
+ADMIN SUPER ADMIN TOTAL PAS ALIGNEE
+
+REGARDER BAREME ET TAUX HORAIRE SI POSSIBLE DE CHANGER DANS LA BDD;
+
+
+
+// A FAIRE CETTE SEMAINE 
+
+PAS DE TIRET SUR LE MODAL VOULEZ VOUS SUPPRIMER---------------------FAIT
+
+ADMIN RECAP A PAYER MANQUE ESPACE-----------------------------------FAIT
+BOUTON PAS BONNE POLICE DANS RECAP----------------------------------FAIT
+
+QUAND DUREE = 0; null pour benevolat; mettre 0 valeur de depart-----FAIT 
+
+PAS DE SAISIE 0 AU LIEU DE 00H00 ET NULL HEURE VALORISEES-----------FAIT
+BOUTON RECHERCHER PAS BONNE POLICE----------------------------------FAIT
+
+ALL PDF pas de majuscule a remboursement----------------------------FAIT
+
+PDF IMAGE SAVED A METTRE A DROITE DU PRENOM. !!!!!
+
+
+peux pas supprimer, apres premiere supression d'une saisie-------------CHOIX A FAIRE
+
+contactez-nous avec tiret------------------------------------------------FAIT
+
+UPPERCASE DANS LISTE ASSOCIATION ET DANS SINGLE ASSOC ET DANS ADMIN ET ADMIN SINGLE-----FAIT
+
+majuscule administration association------------------------FAIT
+adherents association single--------------------------------FAIT
+
+mettre a jour recap recherche dans admin lors d'une supprésion de saisie. DE PAIRE AVEC LA SUPRRESSION
+centrer les saisies dans le tableau.-------------------------------------FAIT
+ 
+met le message pas de saisies trouvé dans admin qu'une seul fois.------------------FAIT
+
+admin, mettre nom logo en haut a gauche, tableau utilisateur haut droite, recap dessous gauche---FAIT
+
+contactez nous dans mobile 
+
+saisie NOM DES CASES EN PLUS GRAS--------------------------FAIT
+
+ENREGISTRER UNE ASSOC SIRET EN MAJUSCULE ET PLACEHOLDER AUSSI------------FAIT
+
+
+placeholder saisie nature du deplacement : 
+conseil d'administration-----------------FAIT
+
+SINSCRIE NOM TOUT EN MAJUSCULE ET PLACEHOLDER---------------------FAIT
+
+rgpd a l'inscirptiOn TITRE COMME INSCRIPTION MEME FONT MEME TAILLE 
+
+
+ENVOYER CLEAR TEXT INPUT ET TOAST 
+toast vous etes deja adherent pas adherant.
+vous n'etes pas adherant adherent
+
+cyril vallé, vendredi matin
+ou il choisi ! 
+a push ?   
+
+
+tableau exactement les meme que dans recap dans admin et superadmin
+
+
+toast: saisie bien supprimée; 
+voulez-vous vraiment adhérer à cette association toast; 
+demande de supression admin virer utilisateur;

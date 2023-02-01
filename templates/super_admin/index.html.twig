@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Super administration{% endblock %}
+
+{% block body %}
+    <link href="{{ asset('css/supeadmin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/indexSuperAdmin.css') }}" rel="stylesheet">
+    <div class="count mt-4">
+        <h4> Il y a {{associations.getTotalItemCount}} associations différentes </h4>
+    </div>
+    <ul class="associations">
+        {% for association in associations %}
+            <li class="assoc-li">
+                <a class="getAssocId uniqueAssoc" href=" {{path('super_admin_assoc', {'id': association.id})}} " id="{{association.id}}">
+                    <h3 class="assoc-name">{{association.name}}</h3>
+                    {% if association.logo != null %}
+                        <img class="assoc-logo" src="{{ asset('/build/logo_directory/' ~ association.logo) }}" alt="logo de l'association">
+                    {% else %}
+                        <img src="{{ asset('/assets/default.PNG') }}" class="assoc-img-first default-image"></img>
+                    {% endif %}
+                    <p class="card-description">{{association.description}}</p>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

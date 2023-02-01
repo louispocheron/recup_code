@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+ superAdmin/user 
+{% endblock %}
+
+{% block body %}
+ <link href="{{ asset('css/admintable.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/recap.css') }}" rel="stylesheet">
+
+ {# <link href="{{ asset('css/superAdminTable.css') }}" rel="stylesheet"> #}
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<p>Administration de {{user.username}} </p>
+    <table class="sortable table">
+        <thead>
+                <tr class="tr-first">
+                    <th data-column="association" data-order="desc" class="no-sort column" >Association</th>
+                    <th data-column="date" data-order="desc" class="column">Date</th>
+                     <th>Ville de départ</th>
+                    <th>Ville d'arrivée</th>    
+                    <th>Raisons</th>
+                    <th>Km</th>
+                    <th>Barème km</th>
+                    <th>Frais</th>
+                    <th>Dons</th>
+                    <th>A payer</th>
+                    <th>Durée</th>
+                    <th>Groupe</th>
+                    <th>Heures valorisées</th>
+                    <th>Supprimer</th>
+                </tr>
+            </thead>
+                <tbody class="ajaxDivContent">
+                    {% for action in actions %}
+                        <tr class="trtest tr-{{action.id}}">
+                            <td data-label="Association" class="td">{{ action.association.name }}</td> 
+                            <td data-label="Date">{{ action.date|date('d/m/Y') }}</td>
+                            <td data-label="Ville de départ">{{ action.villeDepart }}</td>
+                            <td data-label="Ville d'arrivée">{{ action.villeArrive }}</td>
+                            <td data-label="Raison">{{ action.raisons }}</td>
+                            <td data-label="Km">{{ action.km }} km</td>
+                            <td data-label="bareme">{{ action.bareme }}</td>
+                            <td data-label="Frais">{{ action.frais }}€</td>
+                            <td data-label="Don" class="donTd" data-don="{{ action.dons|number_format(2) }}">{{ action.dons|number_format(2) }}€</td>
+                            <td data-label="A payer" class="payerTd" data-payer="{{ action.Apayer }}">{{ action.Apayer|number_format(2) }}€</td>
+                            <td data-label="Durée" class="duree" data-duree="{{ action.duree }}">{{ action.duree }}</td>
+                            <td data-label="groupe">{{ action.groupe }}€</td>
+                            <td data-label="Heures valorisées" class="lastchild valoriseesTd" data-valorisees="{{ action.heuresValorisees|number_format(2) }}">{{ action.heuresValorisees|number_format(2)}}</td>
+                            <td class="trash-action-user" data-id="{{action.id}}"><i class="fa-solid fa-trash poubelle"></i></a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </div>
+        </div>
+
+<div class="modal-adherer">
+    <h1 class="modalP">Voulez vous vraiment supprimer cette saisie ?</h1>
+    <img src="{{ asset('assets/HumanMan.png') }}" class="img-modal"/>
+    <div class='btn-container'>
+            <button class="btn-yes">
+                oui 
+            </button>
+        <button class="btn-no">
+            non
+        </button>
+    </div>
+</div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  {{ encore_entry_script_tags('deleteActionSuperAdmin') }}
+
+{% endblock %}

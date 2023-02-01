@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}
+    pdf
+{% endblock %}
+
+{% block body %}
+<link href="{{ asset('css/recap.css') }}" rel="stylesheet">
+<link href="{{ asset('css/pdf.css') }}" rel="stylesheet">
+
+
+
+<div class="wrapper">
+    <div class="header-pdf">
+         <h2 class="h2-pdf">{{app.user.username}}</h2>
+    </div>
+    <table class="table">
+        <tr>
+            <th>Association</th>
+            <th>Date</th>
+            <th>Ville de départ</th>
+            <th>Ville d'arrivée</th>    
+            <th>Raisons</th>
+            <th>Km</th>
+            <th>Barème km</th>
+            <th>Frais</th>
+            <th>Dons</th>
+            <th>A payer</th>
+            <th>Durée</th>
+            <th>Groupe</th>
+            <th>Heures valorisées</th>
+        </tr>
+        <tr>        
+            <td data-label="Association" class="td">{{ action.association.name }}</td> 
+            <td data-label="Date">{{ action.date|date('d/m/Y') }}</td>
+            <td data-label="Ville de départ">{{ action.villeDepart }}</td>
+            <td data-label="Ville d'arrivée">{{ action.villeArrive }}</td>
+            <td data-label="Raison">{{ action.raisons }}</td>
+            <td data-label="Km">{{ action.km }}km</td>
+            <td data-label="Frais">{{ action.bareme }}</td>
+            <td data-label="Frais">{{ action.frais }}€</td>
+            <td data-label="Don" class="donTdPdf" data-donPdf="{{ action.dons|number_format(2) }}">{{ action.dons|number_format(2) }}€</td>
+            <td data-label="A payer" class="payerTdPdf" data-payerPdf="{{ action.Apayer }}">{{ action.Apayer|number_format(2) }}€</td>
+            <td data-label="Durée" class="dureePdf" data-dureePdf="{{ action.duree }}">{{ action.duree }}</td>
+            <td data-label="Frais">{{ action.groupe }}</td>
+            <td data-label="Heures valorisées" class="lastchild valoriseesTdPdf" data-valoriseesPdf="{{ action.heuresValorisees|number_format(2) }}">{{ action.heuresValorisees|number_format(2)}}</td>
+        </tr>
+    </table>
+    <div class="accept-container">
+        <div class="p-container">
+            <p>je soussigné(e), auteur du présent état, certifie l'éxactitude et souhaite pour la somme notifiée</p>
+        </div>
+        <div class="p-container">
+                <input type="checkbox"/>
+            <p>Son règlement par chèque ou par virement bancaire (fournir RIB pour le premier remboursement ou en cas de changement de compte)</p>
+        </div>
+        <div class="p-container">
+            <input type="checkbox"/>
+            <p>Renoncer au remboursement des frais du présent état au profit de l'association en tant que don</p>
+        </div>
+        <div class="p-container start">
+            <p style="text-align: start;">Fait le : </p>
+        </div>
+    </div>
+    <div class="sign-container"> 
+        <div class="signature">
+            <p class="p-sign">Signature du salarié ou du bénévole : </p>
+        </div>
+        <div class="signature">
+            <p class="p-sign">Signature du trésorier ou du président : </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    {{ encore_entry_script_tags('pdfJs') }}
+{% endblock %}

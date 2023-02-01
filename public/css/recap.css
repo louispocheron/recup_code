@@ -1,0 +1,476 @@
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.trash-png{
+  width: 13px;
+}
+.pdf_icone{
+  width: 16px;
+}
+.wrapper-pdf{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+}
+.pdf-totaux{
+align-self: center;
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+flex-direction: row;
+width: 80%;
+height: auto;
+padding: 5px;
+border: 1px solid black;
+margin-bottom: 1rem;
+margin-top: 1rem;
+}
+.pdf-totaux p {
+  margin: 10px;
+}
+.h2-main{
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #2E2E2E;
+}
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+  .modal-adherer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    height: 40%;
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    /* border-radius: 5px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     padding: 1rem;
+    display: none;
+  }
+  .modalP{
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .img-modal{
+    width: 40%;
+  }
+    .modal-adherer[data-active=true]{
+    display: flex;
+  }
+/* .table{
+    width: 100%;
+    border-collapse: collapse;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+.latest-table{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+}
+.table td, .table th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+.table th{
+    text-align: left;
+    background-color: #152149;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+}
+*/
+
+/* .separation-tr{
+    display: none;
+} */
+.test-salut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.flex-start{
+  align-self: flex-start;
+  margin: 2px 0 0 0;
+}
+.content-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transition: all 0.5s ease-in-out;
+    color: #2E2E2E;
+    text-decoration: none;
+    background-color: #fff;
+}
+.totalDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.main-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.sum-js{
+  width: 100%;
+}
+.totalDiv{
+  padding: 0;
+}
+.total-container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+}
+.total-paragraphe{
+  text-align: center;
+  font-size: 1.1em;
+  margin: 5px;
+  justify-self: flex-start;
+}
+.total-container p{
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+.btn-submit{
+  text-align: center;
+  border-radius: 20px;
+	border: 2px solid #fff;
+	background-color: #152149;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;  
+    /* margin: 1rem; */
+    height: 2.7rem;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    align-self: center;
+    margin-top: 1rem;
+}
+.btn-pdf{
+    text-align: center;
+  border-radius: 20px;
+	border: 2px solid #fff;
+	background-color: #152149;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;  
+    margin: 0 1rem 1rem 1rem;
+    height: 2.7rem;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    align-self: center;
+}
+.btn-pdf-all{
+  text-align: center;
+  border-radius: 20px;
+	border: 2px solid #fff;
+	background-color: #152149;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;  
+    margin: 0 1rem 1rem 1rem;
+    height: 2.7rem;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    align-self: center;
+}
+.select-container{
+  margin: 1rem;
+}
+.btn-submit:hover{
+  background-color: white;
+    color: #152149;
+    border: 1px solid #152149;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-pdf:hover{
+  background-color: #e8e9f0;
+    color: #152149;
+    border: 1px solid #152149;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-pdf-all:hover{
+  background-color: #e8e9f0;
+    color: #152149;
+    border: 1px solid #152149;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.arrowTurn{
+  font-size: 20px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.arrowTurn:hover{
+  color: #152149;
+  transform: rotate(180deg);
+}
+select{
+  width: 100%;
+  height: 2.7rem;
+  border-radius: 5px;
+  border: 1px solid #2E2E2E;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #2E2E2E;
+}
+.content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.pagination span{
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+.current{
+    background-color: #152149;
+    color: white !important;
+}
+
+
+/* CSS TABLEAU */
+.table td, .table th{
+  /* border: 1px solid #ddd; */
+  padding: 8px;
+  text-align: center;
+}
+.pdfIcone{
+  border-top: 1px solid #ddd;
+}
+
+.table tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+.table th{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  background-color: #152149;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+}
+.table tr:hover{
+  cursor: pointer;
+}
+.table td:last-child{
+  text-align: center;
+  color: #152149;
+}
+/* .sortable {
+  border-spacing: 0;
+}
+
+.sortable tbody tr:nth-child(odd) {
+  background: #e4e4e4;
+}
+
+.sortable td{
+    cursor: pointer;
+}
+
+ .sortable td,
+.sortable th {
+  padding: 10px;
+}
+
+.sortable td:first-child,
+.sortable th:first-child {
+  border-top-left-radius: 4px;
+}
+
+.sortable td:last-child,
+.sortable th:last-child {
+  border-top-right-radius: 4px;
+}
+
+.sortable th {
+  background: #808080;
+  color: #fff;
+  cursor: pointer;
+  font-weight: normal;
+  text-align: center;
+} */
+
+
+/* .sortable th:hover::after {
+  color: inherit;
+  font-size: 1.2em;
+  content: ' \025B8';
+} */
+
+/* .sortable th::after {
+  font-size: 1.2em;
+  color: transparent;
+  content: ' \025B8';
+} */
+
+
+
+.sortable th.dir-d {
+  color: #000;
+}
+
+.sortable th.dir-d::after {
+  color: inherit;
+  content: ' \025BE';
+}
+
+.sortable th.dir-u {
+  color: #000;
+}
+
+.sortable th.dir-u::after {
+  color: inherit;
+  content: ' \025B4';
+}
+.last-td-poubelle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.poubelle{
+    color: red;
+}
+.poubelle:hover{
+    color: #152149
+}
+
+
+@media only screen and (max-width: 964px){
+    th{
+        display: none;
+    }
+    thead{
+      display: none;
+    }
+    table, tr, td{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    tr{
+        margin-bottom: 1rem;
+    }
+    td{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pdfIcone{
+      display: none;
+    }
+    .last-td-poubelle{
+      /* display: none; */
+    }
+
+    td::before{
+        content: attr(data-label);
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-left: -5px;
+        color: #152149;
+        font-weight: 600;
+        font-size: 15px;
+    }
+    .content-info{
+      width: 90%;
+    }
+    .modal-adherer{
+      height: auto;
+      width: 80%;
+    }
+    .totalDiv{
+      flex-direction: column;
+      padding: 0;
+    }
+    .select-container{
+      width: 100%;
+    }
+    .btn-submit{
+      width: auto;
+    }
+    .main-container{
+      flex-direction: column;
+    }
+    .total-container{
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    .total-container p{
+      margin-top: 1.2rem;
+      width: 100%;
+    }
+}

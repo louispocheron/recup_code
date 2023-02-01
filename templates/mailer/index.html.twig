@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous contacter{% endblock %}
+
+{% block body %}
+ <link href="{{ asset('css/mailer.css') }}" rel="stylesheet">
+
+
+<div class="form-container">
+    {# <div class="wrapper">
+        <h1 class="h1">NOUS CONTACTER</h1>
+        {{ form_start(form) }}
+        <div class="form-input sujet">
+            {{ form_widget(form.email) }}
+        </div>
+        <div class="form-input message">
+            {{ form_widget(form.content) }}
+        </div>
+        <div class="form-input save">
+            {{ form_widget(form.envoyer) }}
+        </div>
+        {{ form_end(form) }}
+    </div> #}
+</div>
+{% endblock %}

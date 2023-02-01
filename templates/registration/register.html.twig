@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='{{ asset("assets/favicon.png")}}' rel='shortcut icon' type='image/x-icon'/> 
+    <link href="{{ asset('css/register.css') }}" rel="stylesheet">
+    <title>S'inscrire</title>
+</head>
+<body>
+
+{{form_start(registrationForm)}}
+<div class="container">
+    <h1 class="h3 mb-3 font-weight-normal">S'INSCRIRE</h1>
+    <div class="row">
+        <label class="required">Email</label>
+        {{ form_widget(registrationForm.email) }}
+    </div>
+    <div class="row">
+        <label class="required">NOM / Prénom</label>
+        {{ form_widget(registrationForm.username) }}
+    </div>
+    <div class="row">
+        <label class="required">Mot de passe</label>
+        {{ form_widget(registrationForm.plainPassword) }}
+    </div>
+    <div class="row">
+        <label>Photo de profil</label>
+        {{ form_widget(registrationForm.profilPicture) }}
+    </div>
+    <div class="checkbox" class="label-checkbox">
+        <label>
+            <input type="checkbox" required="required" class="checkbox-input" />En cochant vous acceptez les <a href="/conditions-utilisation" target="_blank">Conditions Générales d'Utilisation de SAVED</a>
+        </label>
+    </div> 
+    <div class="row-last">
+        <button type="submit" class="btn-submit">S'inscrire</button>
+    </div>
+</div>
+<div class="container aside">
+    <div class="img-container-aside">
+        <img src="{{ asset('assets/saved_svg_blanc.svg') }}" alt="logo" class="logo-login">
+        <span></span>
+        <img src="{{ asset('assets/logo_blanc.svg') }}" alt="logo" class="logo-login">
+    </div>
+</div>
+
+    {{form_end(registrationForm)}}
+    

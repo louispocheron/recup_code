@@ -1,0 +1,143 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/176.068b7731.js",
+        "/build/app.4024171f.js"
+      ],
+      "css": [
+        "/build/176.df83ead9.css"
+      ]
+    },
+    "main": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/main.69dc28bb.js"
+      ]
+    },
+    "home": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/185.8431b469.js",
+        "/build/530.3357598b.js",
+        "/build/765.0ffcfdc9.js",
+        "/build/156.a642e756.js",
+        "/build/home.c5483238.js"
+      ]
+    },
+    "saisie": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/185.8431b469.js",
+        "/build/530.3357598b.js",
+        "/build/125.7eeae1a4.js",
+        "/build/saisie.418959e9.js"
+      ]
+    },
+    "search": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/185.8431b469.js",
+        "/build/156.a642e756.js",
+        "/build/search.0879b92d.js"
+      ]
+    },
+    "sideBar": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/sideBar.24e362c3.js"
+      ]
+    },
+    "sort": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/185.8431b469.js",
+        "/build/530.3357598b.js",
+        "/build/sort.9136a593.js"
+      ]
+    },
+    "admin": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/185.8431b469.js",
+        "/build/530.3357598b.js",
+        "/build/765.0ffcfdc9.js",
+        "/build/156.a642e756.js",
+        "/build/admin.90d3709e.js"
+      ]
+    },
+    "recap": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/185.8431b469.js",
+        "/build/530.3357598b.js",
+        "/build/765.0ffcfdc9.js",
+        "/build/156.a642e756.js",
+        "/build/26.1cf57583.js",
+        "/build/recap.8cf188b5.js"
+      ]
+    },
+    "choose": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/185.8431b469.js",
+        "/build/choose.ac1a9fce.js"
+      ]
+    },
+    "association": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/association.89e9147a.js"
+      ]
+    },
+    "superAdmin": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/185.8431b469.js",
+        "/build/superAdmin.40271fbf.js"
+      ]
+    },
+    "pdfJs": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/185.8431b469.js",
+        "/build/26.1cf57583.js",
+        "/build/pdfJs.a57f753c.js"
+      ]
+    },
+    "contactUs": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/185.8431b469.js",
+        "/build/26.1cf57583.js",
+        "/build/contactUs.b913b6d0.js"
+      ]
+    },
+    "fetchData": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/185.8431b469.js",
+        "/build/530.3357598b.js",
+        "/build/765.0ffcfdc9.js",
+        "/build/fetchData.13988df9.js"
+      ]
+    },
+    "deleteActionSuperAdmin": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/185.8431b469.js",
+        "/build/deleteActionSuperAdmin.007f0441.js"
+      ]
+    },
+    "superAdminFetch": {
+      "js": [
+        "/build/runtime.9a71ee5d.js",
+        "/build/185.8431b469.js",
+        "/build/530.3357598b.js",
+        "/build/765.0ffcfdc9.js",
+        "/build/superAdminFetch.8fa73e37.js"
+      ]
+    }
+  }
+}
